@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "risklens"
+version = "0.1.0"
+description = "Risk & Portfolio Analytics Dashboard"
+readme = "README.md"
+authors = [
+  { name="Quant Engineer", email="quant@example.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy",
+    "streamlit",
+    "plotly",
+    "quantstream",
+    "pytradelab",
+    "factorlab",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]

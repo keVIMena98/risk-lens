@@ -7,18 +7,10 @@ APP_DESCRIPTION = "Risk & Portfolio Analytics Dashboard"
 VERSION = "0.1.0"
 
 # Defaults
-DEFAULT_SYMBOLS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT"]
-DEFAULT_START_DATE = "2023-01-01"
+DEFAULT_SYMBOLS = ["BTCUSDT", "ETHUSDT", "SOLUSDT"]
+DEFAULT_TIMEFRAME = "1h"
+DEFAULT_START_DATE = "2021-01-01"
+DEFAULT_END_DATE = ""
 DEFAULT_INITIAL_CAPITAL = 100_000.0
-DEFAULT_PERIODS_PER_YEAR = 252  # 365 for crypto, but 252 is standard finance default
-DEFAULT_RISK_FREE_RATE = 0.04   # 4%
-DEFAULT_ROLLING_WINDOW = 30
-
-# Feature Flags
-# Auto-detect if libraries are installed, otherwise use Mocks
-try:
-    import market_pipeline
-    import backtester
-    USE_MOCKS = False
-except ImportError:
-    USE_MOCKS = True
+DEFAULT_PERIODS_PER_YEAR = 365 # Crypto
+DEFAULT_ROLLING_WINDOW = 21
